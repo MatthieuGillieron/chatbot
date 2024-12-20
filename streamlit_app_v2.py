@@ -6,14 +6,19 @@ from ui import create_sidebar  # Importer la fonction mise à jour
 # Configuration de l'application
 st.set_page_config(page_title="CHATBOT-IA", layout="wide")
 
-
 # Fonction pour effacer l'historique du chat
 def clear_chat_history():
-    st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
-
+    # Réinitialiser avec le pré-prompt basé sur l'agent choisi
+    if 'agent_option' in st.session_state:
+        if st.session_state.agent_option == "SEO":
+            st.session_state.messages = [{"role": "assistant", "content": st.session_state.pre_prompt_seo}]
+        else:
+            st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
+    else:
+        st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
 
 # Initialiser la sidebar et récupérer les paramètres
-replicate_api, llm = create_sidebar(st.session_state.get('replicate_api_token', None), None, clear_chat_history)
+replicate_api, llm, agent_option = create_sidebar(st.session_state.get('replicate_api_token', None), None, clear_chat_history)
 
 # Configurer la clé API
 if replicate_api:
@@ -21,13 +26,16 @@ if replicate_api:
 
 # Stocker les réponses générées par LLM
 if "messages" not in st.session_state:
-    st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
+    # Si agent SEO est choisi, appliquer le pré-prompt SEO comme message initial
+    if agent_option == "SEO":
+        st.session_state.messages = [{"role": "assistant", "content": st.session_state.pre_prompt_seo}]
+    else:
+        st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
 
 # Afficher les messages du chat
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
-
 
 # Générer une réponse
 def generate_llama2_response(prompt_input):
@@ -37,7 +45,7 @@ def generate_llama2_response(prompt_input):
         string_dialogue += f"\n{role}: {msg['content']}"
 
     # Récupérer la température depuis la session
-    temperature = st.session_state.get('temperature', 0.1)  # Valeur par défaut à 0.5 si non définie
+    temperature = st.session_state.get('temperature', 0.1)
 
     output = replicate.run(llm, input={"prompt": f"{string_dialogue}\nassistant: {prompt_input}", "temperature": temperature})
     return output
