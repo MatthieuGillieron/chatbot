@@ -16,7 +16,7 @@ def create_sidebar(replicate_api, llm, clear_chat_history):
                 border: none;
                 border-top: 1px solid #ccc;
             }
-            
+
         </style>
     """, unsafe_allow_html=True)
 
@@ -33,12 +33,9 @@ def create_sidebar(replicate_api, llm, clear_chat_history):
     # Afficher les options du chatbot
     if selected_option == "Chatbot":
         # Ajouter une séparation
-       # st.sidebar.markdown('<hr>', unsafe_allow_html=True)
-
-        # Bouton pour effacer l'historique du chat
         st.sidebar.button('Clear Chat', on_click=clear_chat_history)
 
-        # Menu déroulant pour choisir un modèle (en dessous du bouton Clear Chat)
+        # Menu déroulant pour choisir un modèle
         selected_model = st.sidebar.selectbox('Choose a model', ['llama2-7b', 'llama2-13b', 'llama2-70b'],
                                               key='selected_model')
 
@@ -54,13 +51,18 @@ def create_sidebar(replicate_api, llm, clear_chat_history):
         st.sidebar.markdown("### API Token")
         replicate_api = st.sidebar.text_input('Enter API token:', type='password', key='replicate_api_token')
 
+        # Ajout du slider pour la température
+        temperature = st.sidebar.slider('Temperature', min_value=0.01, max_value=1.0, value=0.5, step=0.01)
+        st.session_state['temperature'] = temperature  # Stocker la température dans la session
+
     elif selected_option == "About":
         st.sidebar.markdown("### About")
-        st.sidebar.markdown("Interact with different Llama models🦙\n\n Enter your Replicate API token in the settings to get started🚀 ")
+        st.sidebar.markdown(
+            "Interact with different Llama models🦙\n\n Enter your Replicate API token in the settings to get started🚀 ")
 
         st.sidebar.markdown('<hr>', unsafe_allow_html=True)
 
-        # Button for redirecting to GitHub with a white logo and no border
+        # Button for redirecting to GitHub
         github_button_html = """
             <a href="https://github.com/MatthieuGillieron/chatbot" target="_blank" class="github-button">
                 <button style="background-color: #0E1117; color: white; border: none; border-radius: 12px; padding: 10px 15px; display: flex; align-items: center; cursor: pointer; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">

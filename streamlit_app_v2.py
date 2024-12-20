@@ -36,7 +36,10 @@ def generate_llama2_response(prompt_input):
         role = "user" if msg["role"] == "user" else "assistant"
         string_dialogue += f"\n{role}: {msg['content']}"
 
-    output = replicate.run(llm, input={"prompt": f"{string_dialogue}\nassistant: {prompt_input}", "temperature": 0.1})
+    # Récupérer la température depuis la session
+    temperature = st.session_state.get('temperature', 0.1)  # Valeur par défaut à 0.5 si non définie
+
+    output = replicate.run(llm, input={"prompt": f"{string_dialogue}\nassistant: {prompt_input}", "temperature": temperature})
     return output
 
 
