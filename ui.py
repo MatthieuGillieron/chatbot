@@ -18,6 +18,8 @@ def create_sidebar(replicate_api, llm, clear_chat_history):
         </style>
     """, unsafe_allow_html=True)
 
+
+
     # Sidebar : Menu principal
     with st.sidebar:
         selected_option = option_menu(
