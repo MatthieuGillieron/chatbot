@@ -22,12 +22,7 @@ Avant de pouvoir tester et utiliser ce projet, il est nécessaire de :
    - [Streamlit](https://streamlit.io)
    - [Replicate](https://replicate.com)
 
-2. Accepter les conditions d'utilisation des modèles Llama 2 :
-   - Rendez-vous sur [Meta AI](https://ai.meta.com/resources/models-and-libraries/llama-downloads/)
-   - Acceptez les conditions d'utilisation
-   - Attendez la confirmation par email
-
-3. Obtenir votre clé API Replicate :
+2. Obtenir votre clé API Replicate :
    - Connectez-vous à votre compte Replicate
    - Allez dans les paramètres de votre compte
    - Copiez votre clé API
