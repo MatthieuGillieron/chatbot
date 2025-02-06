@@ -46,14 +46,6 @@ def create_sidebar(replicate_api, llm, clear_chat_history):
         selected_model = st.sidebar.selectbox('Choose a model', ['llama2-7b', 'llama2-13b', 'llama2-70b'],
                                               key='selected_model')
 
-        # Configuration du modèle en fonction de la sélection
-        if selected_model == 'llama2-7b':
-            llm = 'a16z-infra/llama7b-v2-chat:4f0a4744c7295c024a1de15e1a63c880d3da035fa1f49bfd344fe076074c8eea'
-        elif selected_model == 'llama2-13b':
-            llm = 'a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5'
-        else:
-            llm = 'replicate/llama70b-v2-chat:e951f18578850b652510200860fc4ea62b3b16fac280f83ff32282f87bbd2e48'
-
         # Mise à jour du pré-prompt selon l'agent sélectionné
         if agent_option == "SEO":
             st.session_state.pre_prompt = """
