@@ -1,14 +1,14 @@
 import streamlit as st
 import replicate
 import os
-from ui import create_sidebar  # Importer la fonction mise à jour
+from ui import create_sidebar 
 
-# Configuration de l'application
+
 st.set_page_config(page_title="CHATBOT-IA", layout="wide")
 
-# Fonction pour effacer l'historique du chat
+# effacer l'historique du chat
 def clear_chat_history():
-    # Réinitialiser avec le pré-prompt basé sur l'agent choisi
+
     if 'agent_option' in st.session_state:
         if st.session_state.agent_option == "SEO":
             st.session_state.messages = [{"role": "assistant", "content": st.session_state.pre_prompt_seo}]
@@ -17,10 +17,10 @@ def clear_chat_history():
     else:
         st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
 
-# Initialiser la sidebar et récupérer les paramètres
+# Init sidebar et recup. param
 replicate_api, llm, agent_option = create_sidebar(st.session_state.get('replicate_api_token', None), None, clear_chat_history)
 
-# Configurer la clé API
+# Configurer key
 if replicate_api:
     os.environ['replicate_api_token'] = replicate_api
 
@@ -32,7 +32,7 @@ if "messages" not in st.session_state:
     else:
         st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
 
-# Afficher les messages du chat
+# Afficher messages du chat
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
@@ -44,20 +44,20 @@ def generate_llama2_response(prompt_input):
         role = "user" if msg["role"] == "user" else "assistant"
         string_dialogue += f"\n{role}: {msg['content']}"
 
-    # Récupérer la température depuis la session
+    
     temperature = st.session_state.get('temperature', 0.1)
 
     output = replicate.run(llm, input={"prompt": f"{string_dialogue}\nassistant: {prompt_input}", "temperature": temperature})
     return output
 
 
-# Boîte d'entrée utilisateur
+# entrée user
 if prompt := st.chat_input(disabled=not replicate_api):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.write(prompt)
 
-# Générer la réponse de l'assistant
+# Générer la réponse
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
