@@ -2,7 +2,8 @@
 
 ![Chatbot Screenshot](/images/chatbot_message.png)
 
-## Description
+---
+### Description :
 
 Chatbot IA est un projet de chatbot intelligent qui permet d'utiliser différents modèles de Language Learning Models (LLM).  
 Actuellement, le projet supporte **trois modèles Llama** :
@@ -14,7 +15,7 @@ Le projet comprend également une section **agent** *(en cours de développement
 
 ---
 
-## Prérequis
+### Prérequis :
 
 Avant de pouvoir tester et utiliser ce projet, il est nécessaire de :
 
@@ -29,7 +30,7 @@ Avant de pouvoir tester et utiliser ce projet, il est nécessaire de :
 
 ---
 
-## Installation
+### Installation :
 
 1. **Cloner le dépôt :**
    ```bash
@@ -54,7 +55,7 @@ Avant de pouvoir tester et utiliser ce projet, il est nécessaire de :
 
 ---
 
-## Utilisation
+### Utilisation :
 
 1. Sélectionnez un modèle Llama 2 dans le menu déroulant
 2. Choisissez le type d'agent (Classic ou SEO)
@@ -63,20 +64,25 @@ Avant de pouvoir tester et utiliser ce projet, il est nécessaire de :
 
 ---
 
-## Sécurité
+### Sécurité :
 
 **Attention :** Ce projet est une expérimentation et peut contenir des failles de sécurité. Il a été réalisé dans un but d'apprentissage et d'entraînement. Utilisez-le en connaissance de cause.
 
 ---
 
-## Contribuer
+### Contribuer :
 
 Si vous clonez ou forkez ce dépôt, n'hésitez pas à laisser une étoile sur le dépôt pour soutenir le projet !
 Toute contribution est la bienvenue.
 
-## License
+---
+
+### License :
+
 
 Ce projet est sous licence MIT.
+
+---
 
 ## Remarques
 
