@@ -77,14 +77,13 @@ Toute contribution est la bienvenue.
 
 ---
 
-### License :
-
-
-Ce projet est sous licence MIT.
-
----
-
 ### Remarques
 
 - La section agent est encore en développement. Des améliorations et des fonctionnalités supplémentaires seront ajoutées prochainement.
 - N'oubliez pas de vérifier régulièrement les mises à jour et la documentation pour profiter des dernières fonctionnalités.
+
+---
+
+### License :
+
+Ce projet est sous licence [MIT](./LICENSE).
