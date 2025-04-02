@@ -1,6 +1,6 @@
 # Chatbot IA - Version Française
 
-[![English](https://img.shields.io/badge/English-blue.svg)](./READMEen.md)  [![Français](https://img.shields.io/badge/Français-gray.svg)](./README.md)  
+[![English](https://img.shields.io/badge/English-yellow.svg)](./READMEen.md)  [![Français](https://img.shields.io/badge/Français-gray.svg)](./README.md)  
 
 <p align="left">
   <img src="/images/chatbot_message.png" alt="Chatbot Screenshot" width="300" height="auto">
