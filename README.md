@@ -1,6 +1,6 @@
 # Chatbot IA
 
-![Chatbot Screenshot](/images/chatbot_message.png)
+<img src="/images/chatbot_message.png" alt="Chatbot Screenshot" width="300" height="auto">
 
 ---
 ### Description :
@@ -84,7 +84,7 @@ Ce projet est sous licence MIT.
 
 ---
 
-## Remarques
+### Remarques
 
 - La section agent est encore en développement. Des améliorations et des fonctionnalités supplémentaires seront ajoutées prochainement.
 - N'oubliez pas de vérifier régulièrement les mises à jour et la documentation pour profiter des dernières fonctionnalités.
