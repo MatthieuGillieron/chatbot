@@ -1,4 +1,4 @@
-# Chatbot IA
+# Chatbot IA - Version Française
 
 [![English](https://img.shields.io/badge/English-blue.svg)](./READMEen.md)  [![Français](https://img.shields.io/badge/Français-gray.svg)](./README.md)  
 
