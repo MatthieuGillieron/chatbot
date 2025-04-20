@@ -5,6 +5,7 @@
 <p align="center">
   <img src=".streamlit/thumbnail.png" alt="Chatbot Thumbnail" width="500">
 </p>
+
 ---
 
 ### 📝 Description
