@@ -4,7 +4,7 @@ import PyPDF2
 import tempfile
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Chroma
+from langchain.vectorstores import FAISS
 
 def extract_text_from_pdf(pdf_file):
     """Extract text from uploaded PDF file"""
@@ -31,7 +31,7 @@ def create_vector_store(text):
     chunks = text_splitter.split_text(text)
     
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-    vectorstore = Chroma.from_texts(chunks, embeddings, persist_directory=None)
+    vectorstore = FAISS.from_texts(chunks, embeddings)
     
     return vectorstore
 
