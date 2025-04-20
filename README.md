@@ -26,7 +26,7 @@ Built using **Streamlit** and **Replicate API**, the app allows real-time intera
 
 ### ▶️ Try the Chatbot Live
 
- This application is deployed on Streamlit Cloud &nbsp; *Click to see*⎾ [![Run on Streamlit](https://img.shields.io/badge/Streamlit-Demo-orange?logo=streamlit)](https://chatbot-ia.streamlit.app)
+ This application is deployed on Streamlit Cloud &nbsp; *Click to see*⎾ [![Run on Streamlit](https://img.shields.io/badge/Streamlit-Demo-orange?logo=streamlit)](https://trending-chatbot-ia.streamlit.app)
 
 ---
 
