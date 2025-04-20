@@ -1,95 +1,82 @@
-# AI Chatbot - English Version
+# 🤖 AI Chatbot - English Version
 
-[![English](https://img.shields.io/badge/English-yellow.svg)](./README.md)  [![Français](https://img.shields.io/badge/Français-gray.svg)](./doc/READMEfr.md)  
+[![English](https://img.shields.io/badge/English-yellow.svg)](./README.md)  [![Français](https://img.shields.io/badge/Français-gray.svg)](./doc/READMEfr.md)
 
-<p align="left">
-  <img src="/images/chatbot_message.png" alt="Chatbot Screenshot" width="300" height="auto">
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="/images/setting.png" alt="Chatbot Screenshot" width="305" height="auto">
+<p align="center">
+  <img src=".streamlit/thumbnail.png" alt="Chatbot Thumbnail" width="500">
 </p>
-
 ---
-### Description:
 
-AI Chatbot is an intelligent chatbot project that allows the use of different Language Learning Models (LLM).  
-Currently, the project supports **three Llama models**:
+### 📝 Description
+
+AI Chatbot is a conversational application powered by multiple trending Language Learning Models (LLMs)  
+and enhanced with a Retrieval-Augmented Generation (RAG) feature to chat with your PDFs and documents seamlessly  
+You can choose from a variety of state-of-the-art LLMs and leverage RAG to bring contextual knowledge into every conversation
+
+Currently supported models include:
 - `llama2-7b`
-- `llama2-13b`
+- `llama3-8b-instruct`
+- `claude-3.7-sonnet`
+- `deepseek-r1`
 - `llama2-70b`
 
-The project also includes an **agent section** *(under development)*. For now, only the pre-prompt has been modified. This section will be designed to use an LLM trained for a specific task (e.g., an SEO agent, etc.).
+Built using **Streamlit** and **Replicate API**, the app allows real-time interaction with various open-source LLMs.
 
 ---
 
-### Prerequisites:
+### ▶️ Try the Chatbot Live
 
-Before testing and using this project, you need to:
-
-1. Create a (free) account on the following platforms:
-   - [Streamlit](https://streamlit.io)
-   - [Replicate](https://replicate.com)
-
-2. Obtain your Replicate API key:
-   - Log in to your Replicate account
-   - Go to your account settings
-   - Copy your API key
+ This application is deployed on Streamlit Cloud &nbsp; *Click to see*⎾ [![Run on Streamlit](https://img.shields.io/badge/Streamlit-Demo-orange?logo=streamlit)](https://chatbot-ia.streamlit.app)
 
 ---
 
-### Installation:
+### 📦 Prerequisites
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/MatthieuGillieron/chatbot.git
-   cd chatbot
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the application:**
-   ```bash
-   streamlit run app.py
-   ```
-
-4. **Configuration:**
-   - In the application, go to the "Settings" tab
-   - Enter your Replicate API key
-   - Adjust the temperature according to your preferences
+1. [Create a free Replicate account](https://replicate.com)
+2. Get your **Replicate API key** from your profile
+3. [Optional] Set up a local environment if testing locally
 
 ---
 
-### Usage:
+### ⚙️ Installation (Local)
 
-1. Select a Llama 2 model from the dropdown menu
-2. Choose the agent type (Classic or SEO)
-3. Start chatting with the chatbot
-4. Use the "Clear Chat" button to reset the conversation
+```bash
+git clone https://github.com/MatthieuGillieron/chatbot.git
+cd chatbot
+pip install -r requirements.txt
+streamlit run app.py
+```
 
----
-
-### Security:
-
-**Warning:** This project is an experiment and may contain security vulnerabilities. It was created for learning and training purposes. Use it at your own risk.
-
----
-
-### Contribute:
-
-If you clone or fork this repository, feel free to leave a star on the repo to support the project!  
-Any contribution is welcome.
+Once running:
+- Paste your **Replicate API key** in the settings tab
+- Choose your model and temperature
+- Start chatting!
 
 ---
 
-### Notes:
+### 🧠 Features
 
-- The agent section is still under development. Improvements and additional features will be added soon.
-- Be sure to check for updates and documentation regularly to take advantage of the latest features.
+- Real-time chat with LLMs
+- Select among multiple powerful models
+- Adjust temperature for creative or precise responses
+- Clean and responsive Streamlit UI
 
 ---
 
-### License :
+### 🛡️ Security Note
 
-his project is licensed under [MIT](doc/./LICENSE).
+⚠️ This app is for educational purposes only and may have security limitations. Use with caution.
+
+---
+
+### 📄 License
+
+Licensed under the [MIT License](./doc/LICENSE)
+
+---
+
+### 🌟 Contribute
+
+If you like the project, give it a ⭐ on GitHub!  
+Feel free to fork, improve, or submit pull requests.
+
