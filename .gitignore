@@ -1,2 +1,52 @@
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# === Virtual Env ===
+venv/
+env/
+.venv/
+ENV/
+
+# === IDEs ===
+# PyCharm / IntelliJ
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# === Jupyter Notebooks (si tu en as)
+.ipynb_checkpoints/
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+
+# === Logs / Debug / Temp ===
+*.log
+*.tmp
+*.bak
+
+# === Streamlit ===
+.streamlit/secrets.toml  # ← si tu utilises des secrets locaux
+
+# === Tests / Coverage (si tu fais des tests plus tard)
+.coverage
+htmlcov/
+.cache/
+pytest_cache/
+
+# === Env files ===
+.env
+.env.local
+
+# === Others ===
 .DS_Store
 .gitignore
