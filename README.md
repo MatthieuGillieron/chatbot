@@ -45,7 +45,7 @@ Built using **Streamlit** and **Replicate API**, the app allows real-time intera
 git clone https://github.com/MatthieuGillieron/chatbot.git
 cd chatbot
 pip install -r requirements.txt
-streamlit run app.py
+streamlit run src/app.py
 ```
 
 Once running:
