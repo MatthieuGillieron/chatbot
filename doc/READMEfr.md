@@ -93,4 +93,4 @@ Toute contribution est la bienvenue.
 
 ### License :
 
-Ce projet est sous licence [MIT](./LICENSE).
+Ce projet est sous licence [MIT](doc/./LICENSE).

@@ -89,3 +89,7 @@ Any contribution is welcome.
 - Be sure to check for updates and documentation regularly to take advantage of the latest features.
 
 ---
+
+### License :
+
+his project is licensed under [MIT](doc/./LICENSE).
