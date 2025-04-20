@@ -83,12 +83,13 @@ def create_sidebar():
             key='token_input'
         )
         
-        # Update the token in session state when input changes
-        if token_input:
-            st.session_state.replicate_api_token = token_input
-
         st.sidebar.markdown("### Temperature")
-        temperature = st.sidebar.slider("Set the temperature", 0.0, 1.0, 0.1, 0.1)
+        temperature = st.sidebar.slider(
+            "Set the temperature", 
+            0.0, 1.0, 
+            value=st.session_state.temperature,
+            step=0.1
+        )
         st.session_state.temperature = temperature
 
     elif selected_option == "About":
