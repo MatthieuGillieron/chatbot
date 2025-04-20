@@ -3,3 +3,9 @@ streamlit-option-menu==0.3.6
 replicate==0.23.1
 python-dotenv==1.0.0
 PyPDF2==3.0.1
+langchain==0.1.0
+langchain-community==0.0.13
+langchain-core==0.1.17
+langsmith==0.0.69
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
