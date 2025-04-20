@@ -1,52 +1,129 @@
-
-# === Python ===
+# Python
 __pycache__/
 *.py[cod]
+*$py.class
 *.so
-*.egg
-*.egg-info/
-dist/
-build/
-
-# === Virtual Env ===
-venv/
+.Python
 env/
-.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environnements virtuels
+venv/
 ENV/
+env/
+.env
+.venv
+env.bak/
+venv.bak/
 
-# === IDEs ===
-# PyCharm / IntelliJ
-.idea/
-*.iml
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# VSCode
-.vscode/
-
-# === Jupyter Notebooks (si tu en as)
-.ipynb_checkpoints/
-
-# === OS files ===
-.DS_Store
-Thumbs.db
-
-# === Logs / Debug / Temp ===
-*.log
-*.tmp
-*.bak
-
-# === Streamlit ===
-.streamlit/secrets.toml  # ← si tu utilises des secrets locaux
-
-# === Tests / Coverage (si tu fais des tests plus tard)
-.coverage
-htmlcov/
-.cache/
-pytest_cache/
-
-# === Env files ===
 .env
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+secrets.toml
 
-# === Others ===
+# Caches et fichiers temporaires
+.streamlit/secrets.toml
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Fichiers de PDFs et données
+*.pdf
+data/
+uploads/
+vectorstore/
+faiss_index/
+processed_pdfs/
+
+# Streamlit
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers système macOS
 .DS_Store
-.gitignore
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Fichiers système Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Fichiers d'éditeurs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Jupyter Notebook
+.ipynb_checkpoints
