@@ -84,7 +84,6 @@ processed_pdfs/
 
 # Streamlit
 .streamlit/secrets.toml
-.streamlit/config.toml
 
 # Logs
 logs/
