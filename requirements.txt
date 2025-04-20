@@ -2,20 +2,21 @@ streamlit==1.32.0
 streamlit-option-menu==0.3.6
 replicate==0.23.1
 PyPDF2==3.0.1
-# Écosystème LangChain avec versions compatibles
+# Écosystème LangChain compatible avec Python 3.12
 langchain==0.1.0
 langchain-community==0.0.13
 langchain-core==0.1.17
 langsmith==0.0.69
-# Embeddings et vecteurs
+# Version compatible avec Python 3.12
 sentence-transformers==2.2.2
-# Utilisez all-MiniLM-L6-v2 à la place de faiss
-# faiss-cpu est souvent problématique sur Streamlit Cloud
 # Outils supplémentaires
 nltk==3.8.1
 beautifulsoup4==4.12.2
 python-dotenv==1.0.0
 requests==2.31.0
 # Base data science
-numpy==1.24.3
-pandas==2.0.3
+numpy>=1.26.0
+pandas>=2.0.3
+# Versions pré-compilées pour éviter les problèmes de build
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch>=2.0.0
