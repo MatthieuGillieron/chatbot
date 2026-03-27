@@ -1,7 +1,5 @@
 # 🤖 AI Chatbot Multiple LLMs
 
----
-
 ### 📝 Description
 
 AI Chatbot is a conversational application powered by multiple Language Learning Models (LLMs)  
